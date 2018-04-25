@@ -16,8 +16,8 @@ First things first, we should load the autoreload extension from IPython. To lea
 
 
 ```python
-%load_ext autoreload
-%autoreload 2
+# %load_ext autoreload
+# %autoreload 2
 ```
 
 In this section use the driver.py file to define your `Driver` class and use the passenger.py file to define your `Passenger` class. Both of these files can be found in your directory.
