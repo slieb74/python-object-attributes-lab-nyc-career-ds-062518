@@ -13,10 +13,10 @@ class TestObjectAttributes(unittest.TestCase):
         self.assertEqual(new_driver.first, "Ron")
         self.assertEqual(new_driver._last, "Burgundy")
         self.assertEqual(new_driver.last, "Burgundy")
-        self.assertEqual(new_driver._miles_driven, "20")
-        self.assertEqual(new_driver.miles_driven, "20")
-        self.assertEqual(new_driver._rating, "3.0")
-        self.assertEqual(new_driver.rating, "3.0")
+        self.assertEqual(new_driver._miles_driven, 20)
+        self.assertEqual(new_driver.miles_driven, 20)
+        self.assertEqual(new_driver._rating, 3.0)
+        self.assertEqual(new_driver.rating, 3.0)
 
     def test_passenger_instance_methods_decorators(self):
         new_passenger = Passenger()

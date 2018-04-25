@@ -1,14 +1,55 @@
-# define Driver class and instance methods here
-
-# Note: remember that our instance methods need to be defined with the an
-# argument in order to be called on an instance of the class or else we will
-# get a `TypeError` telling us that we gave one too many arguments to the
-# function. We'll explain why that is soon.
-
 class Driver:
 
-    def greeting(self):
-        return "Hey, how are you?"
+    @property
+    def first(self):
+        return self._first
 
-    def ask_for_destination(self):
-        return "Where would you like to go today?"
+    @first.setter
+    def first(self, first_name):
+        self._first = first_name
+        return self._first
+
+    @property
+    def last(self):
+        return self._last
+
+    @last.setter
+    def last(self, last_name):
+        self._last = last_name
+        return self._last
+
+    @last.deleter
+    def last(self):
+        self._last = None
+
+    @property
+    def rating(self):
+        return self._rating
+
+    @rating.setter
+    def rating(self, rating):
+        self._rating = rating
+        return self._rating
+
+    @rating.deleter
+    def rating(self):
+        self._rating = None
+
+    @property
+    def miles_driven(self):
+        return self._miles_driven
+
+    @miles_driven.setter
+    def miles_driven(self, miles_driven):
+        self._miles_driven = miles_driven
+        return self._miles_driven
+
+    @miles_driven.deleter
+    def miles_driven(self):
+        self._miles_driven = None
+
+    def fullname(self):
+        return "{} {}".format(self.first, self.last)
+
+    def greet_passenger(self):
+        return "Hello! I'll be your driver today. My name is {}".format(self.fullname())
