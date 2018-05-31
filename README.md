@@ -2,13 +2,13 @@
 # Python Object Attributes Lab
 
 ## Introduction
-In this lab, we will practice defining classes and instance methods. We will also practice using getter and setter (read and write) methods using properties and decorators to operate on instance variables.
+In this lab, we will practice defining classes and instance methods. We will also practice working with getter and setter (read and write) methods using properties and decorators to operate on instance variables.
 
 ## Objectives
 
 * Practice defining classes and instantiating instances of those classes
-* Practice deinfing instance methods
-* Use properties and deocrators properly
+* Practice defining instance methods
+* Use properties and decorators properly
 
 ## Defining Classes and Instance Methods
 
@@ -16,15 +16,15 @@ First things first, we should load the autoreload extension from IPython. To lea
 
 
 ```python
-# %load_ext autoreload
-# %autoreload 2
+%load_ext autoreload
+%autoreload 2
 ```
 
 In this section use the driver.py file to define your `Driver` class and use the passenger.py file to define your `Passenger` class. Both of these files can be found in your directory.
 
-Our driver instance objects should have instance variables for first name, last name, miles_driven, and rating. We can name these instance variables `_first_name`, `_last_name`, `_miles_driven`, and `_rating`. We will want to be able to access, change, and delete these values using the appropriate properties and decorators. 
+Our driver instance objects should have instance variables for first name, last name, miles driven, and rating. We can name these instance variables `_first_name`, `_last_name`, `_miles_driven`, and `_rating`. We will want to be able to access, change, and delete these values using the appropriate properties and decorators. 
 
-After defining the above instance methods, define an instance method called `greet_passenger`, which returns the string `Hello! I'll be your driver today. My name is ` followed by that driver's first name and last name (i.e. Hello! I'll be your driver today. My name is: John Doe).
+After defining the above instance methods, define an instance method called `greet_passenger`, which returns the string `Hello! I'll be your driver today. My name is ` followed by that driver's first name and last name (i.e. Hello! I'll be your driver today. My name is John Doe).
 
 
 ```python
@@ -44,19 +44,6 @@ print(driver.miles_driven) # 100
 print(driver.rating) # 4.9
 driver.greet_passenger() # Hello! I'll be your driver today. My name is Rachel Jensen
 ```
-
-    Rachel
-    Jensen
-    100
-    4.9
-
-
-
-
-
-    "Hello! I'll be your driver today. My name is Rachel Jensen"
-
-
 
 In the `Passenger` class, we will want our passenger instance objects to have the attributes first name, last name, and email. Let's continue using the leading underscore naming convention we employed in our `Driver` class and name these instance variables `_first_name`, `_last_name`, and `_email`. Define the appropriate instance methods using property and the appropriate decorators for reading (getting), writing (setting), and deleting instance variables. 
 
@@ -78,18 +65,6 @@ print(passenger.last) # "Burgundy"
 print(passenger.email) # "ron.burgundy1984@gmail.com"
 passenger.yell_name() # "RON BURGUNDY"
 ```
-
-    Ron
-    Burgundy
-    ron.burgundy1984@gmail.com
-
-
-
-
-
-    'RON BURGUNDY'
-
-
 
 Great work!
 
