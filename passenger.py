@@ -5,26 +5,24 @@ class Passenger:
         return self._first
 
     @first.setter
-    def first(self, first_name):
-        self._first = first_name
-        return self._first
+    def first(self, first):
+        self._first = first
 
     @first.deleter
     def first(self):
-        self._first = None
+        del self._first
 
     @property
     def last(self):
         return self._last
 
     @last.setter
-    def last(self, last_name):
-        self._last = last_name
-        return self._last
+    def last(self, last):
+        self._last = last
 
     @last.deleter
     def last(self):
-        self._last = None
+        del self._last
 
     @property
     def email(self):
@@ -33,11 +31,11 @@ class Passenger:
     @email.setter
     def email(self, email):
         self._email = email
-        return self._email
+
 
     @email.deleter
     def email(self):
-        self._email = None
+        del self._email
 
     def fullname(self):
         return "{} {}".format(self.first, self.last)

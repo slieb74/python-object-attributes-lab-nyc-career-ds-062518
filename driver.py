@@ -5,22 +5,24 @@ class Driver:
         return self._first
 
     @first.setter
-    def first(self, first_name):
-        self._first = first_name
-        return self._first
+    def first(self, first):
+        self._first = first
+
+    @first.deleter
+    def first(self):
+        del self._first
 
     @property
     def last(self):
         return self._last
 
     @last.setter
-    def last(self, last_name):
-        self._last = last_name
-        return self._last
+    def last(self, last):
+        self._last = last
 
     @last.deleter
     def last(self):
-        self._last = None
+        del self._last
 
     @property
     def rating(self):
@@ -29,11 +31,10 @@ class Driver:
     @rating.setter
     def rating(self, rating):
         self._rating = rating
-        return self._rating
 
     @rating.deleter
     def rating(self):
-        self._rating = None
+        del self._rating
 
     @property
     def miles_driven(self):
@@ -42,11 +43,10 @@ class Driver:
     @miles_driven.setter
     def miles_driven(self, miles_driven):
         self._miles_driven = miles_driven
-        return self._miles_driven
 
     @miles_driven.deleter
     def miles_driven(self):
-        self._miles_driven = None
+        del self._miles_driven
 
     def fullname(self):
         return "{} {}".format(self.first, self.last)
