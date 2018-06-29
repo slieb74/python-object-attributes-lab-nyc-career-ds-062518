@@ -41,21 +41,3 @@ class Driver:
 
     def greet_passenger(self):
         return "Hello! I'll be your driver today. My name is {} {}".format(self._first, self._last)
-
-
-
-############# ORIGINAL ATTEMPT - PASSED TESTS ###################
-# def _first_name(self, first):
-#     self._first_name = first
-#
-# def _last_name(self, last):
-#     self._last_name = last
-#
-# def _miles_driven(self, miles_driven):
-#     self._miles_driven = miles_driven
-#
-# def _rating(self, rating):
-#     self._rating = rating
-#
-# def greet_passenger(self):
-#     return "Hello! I'll be your driver today. My name is {} {}".format(self._first_name, self._last_name)
